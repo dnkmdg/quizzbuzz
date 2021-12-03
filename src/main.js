@@ -6,7 +6,7 @@ import router from './routes.js'
 
 import './assets/tailwind.css'
 
-const socket = io('http://localhost:8090')
+const socket = io('https://13.49.98.24:8090')
 
 console.log(import.meta.env.PROD)
 
