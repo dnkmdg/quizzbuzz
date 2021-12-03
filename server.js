@@ -1,23 +1,23 @@
 require('dotenv').config()
 
 const fs = require('fs')
-const https = require('https')
+const http = require('http')
 const express = require('express')
 const cors = require('cors')
 const socketio = require('socket.io')
 const app = express()
 
-const pkey = process.env.PKEY ? fs.readFileSync(process.env.PKEY) : null
-const pcert = process.env.PCERT ? fs.readFileSync(process.env.PCERT) : null
+// const pkey = process.env.PKEY ? fs.readFileSync(process.env.PKEY) : null
+// const pcert = process.env.PCERT ? fs.readFileSync(process.env.PCERT) : null
 
-var options = {
-    key: pkey,
-    cert: pcert
-}
+// var options = {
+//     key: pkey,
+//     cert: pcert
+// }
 
 app.use(cors())
 
-const server = https.Server(app, options)
+const server = http.Server(app)
 const io = socketio(server, {
     cors: {
         origin: '*',
