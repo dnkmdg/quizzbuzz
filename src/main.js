@@ -6,7 +6,7 @@ import router from './routes.js'
 
 import './assets/tailwind.css'
 
-const socket = io('http://quizzbuzz.foag.io:8090')
+const socket = io('https://quizzbuzz.foag.io:8090')
 
 const app = createApp(App, {
     sockets: {

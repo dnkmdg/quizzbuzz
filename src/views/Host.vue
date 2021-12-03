@@ -83,7 +83,7 @@ export default {
             }
 
             try {
-                const { data } = await axios.get(`http://13.49.98.24:8090/api/host/${this.hostId}`)
+                const { data } = await axios.get(`https://quizzbuzz.foag.io:8090/api/host/${this.hostId}`)
 
                 localStorage.setItem('buzzmaster', this.hostId)
 
