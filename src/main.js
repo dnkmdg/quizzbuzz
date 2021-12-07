@@ -6,7 +6,11 @@ import router from './routes.js'
 
 import './assets/tailwind.css'
 
-const socket = io('https://quizzbuzz.foag.io:8090')
+console.log(import.meta.env)
+
+window.baseUrl = import.meta.env.VITE_BASE_URL
+
+const socket = io(window.baseUrl)
 
 const app = createApp(App, {
     sockets: {
